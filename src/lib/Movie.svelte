@@ -1,5 +1,6 @@
 <script>
 	import DeleteMovie from "./DeleteMovie.svelte";
+	import ReselectMovie from "./ReselectMovie.svelte";
 
     export let id;
 	export let title;
@@ -8,6 +9,8 @@
 	export let length = undefined;
 	export let imageSrc = undefined;
 	export let movieResultsLength = 0;
+
+
 </script>
 
 <div class="flex columns-3 drop-shadow-2xl mx-5 p-2 my-1 rounded-lg bg-cultured">
@@ -32,5 +35,9 @@
 			{description}
 		</p>
 	</div>
+	{#if movieResultsLength > 1}
+	<ReselectMovie on:reselect/>
+	{/if}
     <DeleteMovie {id}></DeleteMovie>
+	
 </div>

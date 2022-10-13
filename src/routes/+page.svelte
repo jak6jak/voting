@@ -38,7 +38,7 @@
 
 		Movielist.update((n) => {
 			console.log(result.data);
-			return [...result.data,...n ];
+			return [...result.data, ...n];
 		});
 		formSubmit.reset();
 		console.log($Movielist);
@@ -70,7 +70,7 @@
 			{#if movie.total_results > 0}
 				<MovieListing
 					id={movie.id}
-					movieResultsLength = {movie.results.length}
+					movieResultsLength={movie.results.length}
 					title={movie.results[movie.ChosenMovieIndex].title}
 					description={movie.results[movie.ChosenMovieIndex].overview}
 					year={movie.results[movie.ChosenMovieIndex].release_date}

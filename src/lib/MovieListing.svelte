@@ -4,6 +4,7 @@
     import Movie from '$lib/Movie.svelte'
 	import { Movielist } from './stores';
 	import { fade } from 'svelte/transition';
+	import MovieSelection from '$lib/MovieSelection.svelte';
 
 	export let id;
 	export let title: String;
@@ -13,9 +14,16 @@
 	export let imageSrc: URL = undefined;
 	export let movieResultsLength = 0;
 
+	let ShowReslection = false;
+
+	function handleMessage(event){
+		ShowReslection = !ShowReslection;
+	}
+
 	//https://www.themoviedb.org/t/p/w440_and_h660_face/lr11mCT85T1JanlgjMuhs9nMht4.jpg
 </script>
 
+{#if ShowReslection == false}
 <Movie
 {id}
 {title}
@@ -24,8 +32,11 @@
 {length}
 {imageSrc}
 {movieResultsLength}
+on:reselect={handleMessage}
 ></Movie>
-
+{:else}
+<MovieSelection on:reselect={handleMessage} {id}></MovieSelection>
+{/if}
 
 <!----
 <div class="absolute top-0 right-0">
