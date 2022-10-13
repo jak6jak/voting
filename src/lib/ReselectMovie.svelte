@@ -5,7 +5,6 @@
     const dispatch = createEventDispatcher();
 
     function reselectMovie(){
-        console.log("hello")
         dispatch('reselect');
     }
 </script>

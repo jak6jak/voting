@@ -13,7 +13,7 @@
 
 </script>
 
-<div class="flex columns-3 drop-shadow-2xl mx-5 p-2 my-1 rounded-lg bg-cultured">
+<div class="flex columns-3 drop-shadow-2xl mx-5 p-2 my-2 rounded-lg bg-cultured">
 	<div class="w-16 h-24 col-span-1 shrink-0 mx-1">
 		{#if imageSrc != undefined}
 			<img src={imageSrc} alt="movie poster" />

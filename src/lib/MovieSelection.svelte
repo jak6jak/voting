@@ -29,7 +29,7 @@
 			<div class= "mx-4 min-w-fit">
             <button on:click={() => selectMovie(i)}>
             <img class="min-w-full drop-shadow-lg" 
-            src={'https://www.themoviedb.org/t/p/w92/' + movie.poster_path} />
+            src={'https://www.themoviedb.org/t/p/w92/' + movie.poster_path} alt={movie.title} />
             </button>
 
 			<p class="text-center">{new Date(movie.release_date).getFullYear()}</p>

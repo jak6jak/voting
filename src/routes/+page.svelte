@@ -49,6 +49,7 @@
 	class="min-h-screen grow h-fit shrink-0 bg-gradient-to-b from-background-dark to-background-light"
 >
 	<h1 class="text-5xl font-bold text-center p-8 text-gold-metallic">Movie Night Polls!</h1>
+	<h2 class="text-2xl text-center p-8 text-gold-metallic">Select Movies to vote on!</h2>
 	<div class="container grow h-fit mx-auto">
 		<form
 			bind:this={formSubmit}
